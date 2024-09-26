@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+TRIMMED_RNA_SEQ="${INPUT_DIR}/${SAMPLE_NAME}_trimmed.fastq.gz"
+RAW_RNA_SEQ="${INPUT_DIR}/${RNA_SEQ}"
+
+# Variables for Trimmomatic inputs
+TRIMMOMATIC_DIR="$TOOLS_DIR/trimmomatic-0.39"
+TRIMMOMATIC_JAR="$TRIMMOMATIC_DIR/trimmomatic-0.39.jar"
+# ADAPTERS_FILE="$REFERENCE_DIR/adapters.fa"
+LEADING_QUALITY=3
+TRAILING_QUALITY=3
+SLIDING_WINDOW="4:20"
+MINLEN=36
